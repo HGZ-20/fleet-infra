@@ -4871,12 +4871,6 @@ spec:
         - --storage-path=/data
         - --storage-adv-addr=source-controller.$(RUNTIME_NAMESPACE).svc.cluster.local.
         env:
-        - name: HTTPS_PROXY
-          value: http://192.168.0.165:7890
-        - name: HTTP_PROXY
-          value: http://192.168.0.165:7890
-        - name: NO_PROXY
-          value: 127.0.0.1,localhost,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,.svc,.cluster.local,kubernetes.default.svc
         - name: RUNTIME_NAMESPACE
           valueFrom:
             fieldRef:
